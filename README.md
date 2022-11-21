@@ -8,6 +8,8 @@ This project is an application that renders 3D models using just 2D primitive fu
 ## What's the point of it?
 The objective of creating this project is just for self validation of my knoledge on Analytic Geometry and Linear Algebra and test my skills using transformation matrix.
 
+![alt text](screnshots/Screenshot_3.jpg)
+
 ## How does it works?
 This code calculates the transformation for a perspective projection, the calculus simulates a Pinhole Camera Model so we basically define the Pinhole Position (The position of the camera), the display surface's position relative to the camera pinhole (like a photographic film on the back of the camera), the orientation of the camera and the point to be projected. 
 
