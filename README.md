@@ -24,20 +24,28 @@ And then calculate the point projected into the 2D Plane:
 
 ![alt text](screnshots/Screenshot_151.jpg)
 
-## Calculating the FOV
+## Calculating the FOV (Field of View)
 The Field of View is directly related to the distance of the display surface's position, since the angle of the field can be determined by "radAngle = 2 * arctan(1/Ez)" we can use a reverse operation to calculate the position of the display surface's Z position based on the angle. The operation to determine the Z position of the display surface's Z position is the following:
 
 ```
 Zposition = -math.tan(1 / ((fovDeg * math.pi) / 180)) * 2
 ```
 
+The image bellow illustrates the relation between the Field of View and the distance between the image plane from the camera aperture. As it moves farther away the angle of the FOV decreses in the same ratio as described in the formula above.
+
+![alt text](screnshots/zoom.png)
+
 ## Calculating the Depth
-Since using a Z-Buffer would not be a good ideia without using the GPU the easiest way so far is to use the Painter's Algorith. So basically everytime we calculate de camera projection transformation (The "d" matrix above) we store the z value that at this point is already relative to the camera, and then for the subsequent frames we sort the order of the faces that should be rendered by the last Z Value, this way we ensure that the faces from behind the cube are rendered first avoid some artifacts.
+Since using a Z-Buffer would not be a good ideia without using the GPU the easiest way so far is to use the Painter's Algorith. So basically everytime we calculate de camera projection transformation (The "d" matrix above) we store the z value that at this point is already relative to the camera, and then for the subsequent frames we sort the order of the faces that should be rendered by the last Z Value, this way we ensure that the faces from behind the cube are rendered first avoid some artifacts.  
+Bellow you can see an example of the Painter's Algorithm, basically the most distant elements are rendered before, this way closer elements overlaps the distant ones.
+
+![alt text](screnshots/600px-Painter's_algorithm.svg.png)
 
 ## References
 Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera  
 Source: https://en.wikipedia.org/wiki/3D_projection  
 Source: https://en.wikipedia.org/wiki/Rotation_matrix  
+Source: https://en.wikipedia.org/wiki/Painter%27s_algorithm  
 
 ## License
 MIT License
