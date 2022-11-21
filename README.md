@@ -43,6 +43,9 @@ Bellow you can see an example of the Painter's Algorithm, basically the most dis
 
 ![alt text](screnshots/600px-Painter's_algorithm.svg.png)
 
+## How to Run It?
+This project uses the pygame (for 2D rendering) and numpy (for matrix operations), just install these libraries using pip and then run "python perspective3d.py" to run this project on your computer.
+
 ## References
 Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera  
 Source: https://en.wikipedia.org/wiki/3D_projection  
