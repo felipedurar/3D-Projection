@@ -34,9 +34,10 @@ Zposition = -math.tan(1 / ((fovDeg * math.pi) / 180)) * 2
 ## Calculating the Depth
 Since using a Z-Buffer would not be a good ideia without using the GPU the easiest way so far is to use the Painter's Algorith. So basically everytime we calculate de camera projection transformation (The "d" matrix above) we store the z value that at this point is already relative to the camera, and then for the subsequent frames we sort the order of the faces that should be rendered by the last Z Value, this way we ensure that the faces from behind the cube are rendered first avoid some artifacts.
 
-Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera
-Source: https://en.wikipedia.org/wiki/3D_projection
-Source: https://en.wikipedia.org/wiki/Rotation_matrix
+## References
+Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera  
+Source: https://en.wikipedia.org/wiki/3D_projection  
+Source: https://en.wikipedia.org/wiki/Rotation_matrix  
 
 ## License
 MIT License
