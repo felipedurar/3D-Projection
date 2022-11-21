@@ -48,6 +48,7 @@ This project uses the pygame (for 2D rendering) and numpy (for matrix operations
 
 ## References
 Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera  
+Source: https://www.scratchapixel.com/lessons/3d-basic-rendering/3d-viewing-pinhole-camera/how-pinhole-camera-works-part-2  
 Source: https://en.wikipedia.org/wiki/3D_projection  
 Source: https://en.wikipedia.org/wiki/Rotation_matrix  
 Source: https://en.wikipedia.org/wiki/Painter%27s_algorithm  
